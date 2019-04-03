@@ -1,0 +1,35 @@
+<doctype html>
+<html>
+  <head>
+    <title>Flask Music Database</title>
+</head>
+
+<h2>Flask Music Database</h2>
+<a href="{{ url_for('new_book') }}"> 
+New Album </a>
+
+<body>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+
+{% from "_formhelpers.html" import render_field %}
+<form method="POST">
+  <p>{{render_field(form.search)}}</p>
+  <p>
+    <input type="submit" value="Search">
+  </p>
+  
+</form>
+
+
+</body>
+
+</html>
+

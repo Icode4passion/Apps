@@ -1,0 +1,40 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Movie App</title>
+</head>
+<body>
+	<form action={{url_for("movies")}} method="POST">
+		Movie Title <input type="text" name="movietitle">
+		Year of Release <input type="text" name="releaseDate">
+		Genre  <input type="text" name="genre">
+		Director <input type="text" name="director">
+		Rating<input type="text" name="rating">
+		Star<input type="text" name="star">
+		<input type="Submit" value="Add Movie">
+	</form>
+
+	{% for movie in movies %}
+		<div>
+			<p>
+			{{movie.movietitle}} -->
+			{{movie.releaseDate}}-->	 
+			{{movie.genre}}-->		 
+			{{movie.rating}}-->		 
+			{{movie.star}}
+		</p>	
+		</div>
+
+		<div>
+			<p>
+				<form action="{{url_for('movies')}}" method="POST" >
+					
+				</form>
+			</p>
+		</div>
+		
+		
+	{% endfor %}
+
+</body>
+</html>

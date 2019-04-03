@@ -1,0 +1,39 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>New Book</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+      
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+      
+  </script>
+</head>
+<body>
+	{% from "_formhelpers.html" import render_field %}
+<form method=post>
+<div class="container">
+    <div class="form-group">             
+        {{ render_field(form.book_title) }}
+         
+        {{ render_field(form.book_type) }}
+         
+        {{ render_field(form.authors) }}
+         
+        {{ render_field(form.UID) }}
+         
+        {{ render_field(form.publisher) }}
+         
+        {{ render_field(form.publish_date) }}
+         
+        {{ render_field(form.edition) }}
+         
+        {{ render_field(form.binding) }}
+    </div>
+</div> 
+<button type="submit" class="btn btn-primary">Submit</button>
+</form>
+	
+</body>
+</html>

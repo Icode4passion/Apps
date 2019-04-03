@@ -1,0 +1,56 @@
+<doctype html>
+
+<title>Search Results - Flask Music Database</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
+</head>
+<body>
+
+<div class="container">
+  <div class="jumbotron vertical-center">
+    <h1>Book Search Website</h1>      
+    <p>Books of all popular Authors , Title Avilable on single Click.</p>
+  </div>        
+</div>
+
+<div >
+
+	<table align="center" class="table">
+		<thead thead-dark>
+			<tr>
+				<th>Book Id</th>
+				<th>Book Title</th>
+				<th>Book Type</th>
+				<th>Book Author</th>
+				<th>Book UID</th>
+				<th>Book Publisher</th>
+				<th>Book PublishDate</th>
+				<th>Book Edition</th>
+				<th>Book Binding</th>
+			</tr>			
+		</thead>
+		<tfoot>
+				<tr table-active">
+					{% for post in posts %}	
+					<td>{{ post.id }}</td>
+					<td>{{ post.book_title }}</td>
+					<td>{{ post.book_type }}</td>
+					<td>{{ post.authors }}</td>
+					<td>{{ post.UID }}</td>
+					<td>{{ post.publisher }}</td>
+					<td>{{ post.publish_date }}</td>
+					<td>{{ post.edition }}</td>
+					<td>{{ post.binding }}</td>
+				</tr>
+				{% endfor %}
+		</tfoot>
+	</table>
+	
+</div>
+</body>
+
+
+
+
